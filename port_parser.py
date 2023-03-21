@@ -65,7 +65,7 @@ def main() -> None:
                 ports = parse_port(log)
                 ports = ','.join(ports)
                 debug("ports found for %s: %s", abs_path, ports)
-                info("Log entry '%s...' includes %s ports", log[:20], ports)
+                info("Log entry '%s...' includes these ports: %s", log[:20], ports)
     
 
 if __name__ == "__main__":
