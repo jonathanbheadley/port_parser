@@ -7,6 +7,8 @@ I created a virtual env for this project. Use the `requirements.txt` to build yo
 ```
 $ python -m venv venv
 
+$ ./venv/bin/python -m pip install -r requirements.txt
+
 $ ./venv/bin/python --version
 Python 3.9.14
 ```
