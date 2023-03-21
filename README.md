@@ -21,6 +21,21 @@ test_port_parser.py::test_parse_port PASSED                                     
 ## Port Parser
 The main function simply loops through a user input log directory and prints results to screen. User can include a `-d` switch to print debug info
 ```
+$ ./venv/bin/python port_parser.py logs -h
+usage: port_parser.py [-h] [-d] dir
+
+Parses log files in a log directory for ports associated with each log entry
+
+positional arguments:
+  dir          Input logs directory
+
+optional arguments:
+  -h, --help   show this help message and exit
+  -d, --debug  output debug information
+```
+
+### Output
+```
 $ ./venv/bin/python port_parser.py logs
 INFO:port_parser:Log entry '<86>May 28 08:21:45 ...' includes 11332 ports
 INFO:port_parser:Log entry '<14>Aug 18 09:00:04 ...' includes 19778 ports
