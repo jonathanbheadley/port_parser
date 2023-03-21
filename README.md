@@ -35,3 +35,9 @@ INFO:port_parser:Log entry '<14>Aug 18 09:00:04 ...' includes 19778 ports
 DEBUG:port_parser:ports found for /home/e0183912/Python/DEV/ideas/port_parser/logs/logfile.log: 60641,80
 INFO:port_parser:Log entry '<134>1 2020-08-14T18...' includes 60641,80 ports
 ```
+
+The port_parser.py can be easilty redesigned to compile logs from other sources. i.e., results from an API call to a system storing logs; accepting stdin; pulling from a database; etc.
+
+Depending on the input source using concurrent.futures.ThreadPoolExecutor for I/O-bound inputs would speed up log collection by multithreading those calls.
+
+May also consider concurrent.futures.ProcessPoolExecutor to multiprocess thru the logs depending on the number/size.
