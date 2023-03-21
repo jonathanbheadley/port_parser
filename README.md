@@ -2,6 +2,15 @@ An example on how to parse ports given log files using a python regex module
 
 The example logs can be found in the `test_port_parser.py` file as well as in a mock log file in logs/logfile.log
 
+## Virtual Env
+I created a virtual env for this project. Use the `requirements.txt` to build your own.
+```
+$ python -m venv venv
+
+$ ./venv/bin/python --version
+Python 3.9.14
+```
+
 ## Unittest
 I wrote a simple unittest that tests the parse_port function against the sample logs. These test cases can be extended with other log examples and pytest ran to ensure the appropriate ports are parsed as expected.
 
