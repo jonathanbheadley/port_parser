@@ -37,18 +37,18 @@ optional arguments:
 ### Output
 ```
 $ ./venv/bin/python port_parser.py logs
-INFO:port_parser:Log entry '<86>May 28 08:21:45 ...' includes 11332 ports
-INFO:port_parser:Log entry '<14>Aug 18 09:00:04 ...' includes 19778 ports
-INFO:port_parser:Log entry '<134>1 2020-08-14T18...' includes 60641,80 ports
+INFO:port_parser:Log entry '<86>May 28 08:21:45 ...' includes these ports: 11332
+INFO:port_parser:Log entry '<14>Aug 18 09:00:04 ...' includes these ports: 19778
+INFO:port_parser:Log entry '<134>1 2020-08-14T18...' includes these ports: 60641,80
 
 $ ./venv/bin/python port_parser.py logs -d
-DEBUG:port_parser:parsing logs/logfile.log
-DEBUG:port_parser:ports found for /home/e0183912/Python/DEV/ideas/port_parser/logs/logfile.log: 11332
-INFO:port_parser:Log entry '<86>May 28 08:21:45 ...' includes 11332 ports
-DEBUG:port_parser:ports found for logs/logfile.log: 19778
-INFO:port_parser:Log entry '<14>Aug 18 09:00:04 ...' includes 19778 ports
-DEBUG:port_parser:ports found for logs/logfile.log: 60641,80
-INFO:port_parser:Log entry '<134>1 2020-08-14T18...' includes 60641,80 ports
+DEBUG:port_parser:parsing /home/e0183912/Python/DEV/ideas/port_parser/logs/logfile.log
+DEBUG:port_parser:ports found for logfile.log, line 1: 11332
+INFO:port_parser:Log entry '<86>May 28 08:21:45 ...' includes these ports: 11332
+DEBUG:port_parser:ports found for logfile.log, line 2: 19778
+INFO:port_parser:Log entry '<14>Aug 18 09:00:04 ...' includes these ports: 19778
+DEBUG:port_parser:ports found for logfile.log, line 3: 60641,80
+INFO:port_parser:Log entry '<134>1 2020-08-14T18...' includes these ports: 60641,80
 ```
 
 The port_parser.py can be easilty redesigned to compile logs from other sources. i.e., results from an API call to a system storing logs; accepting stdin; pulling from a database; etc.
