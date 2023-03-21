@@ -61,10 +61,10 @@ def main() -> None:
             debug("parsing %s", abs_path)
             with open(abs_path) as f:
                 logs = f.read()
-            for log in logs.splitlines():
+            for idx, log in enumerate(logs.splitlines()):
                 ports = parse_port(log)
                 ports = ','.join(ports)
-                debug("ports found for %s: %s", abs_path, ports)
+                debug("ports found for %s, line %s: %s", file, idx+1, ports)
                 info("Log entry '%s...' includes these ports: %s", log[:20], ports)
     
 
